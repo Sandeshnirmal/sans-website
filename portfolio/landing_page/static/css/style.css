@@ -1,0 +1,97 @@
+#bg-main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* display:none; */
+    background: no-repeat fixed center center;
+    background-size: cover;
+    padding: 0%;
+    margin: 0%;
+    background-attachment:fixed ;
+
+}
+body{
+    padding: 0%;
+    margin: 0%;
+}
+.parallax{
+    padding: 0%;
+    margin: 0%;
+}
+
+.bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-size: contain;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    width: 25%;  /* Adjust width (50% of container) */
+    height: auto;
+}
+
+#bg-1{
+    left:50%;
+    top:30%;
+    width: 40%;
+}
+
+#bg-2{
+    left:43%;
+    top:62%;
+}
+
+#bg-3{
+    left:47%;
+    top:80%;
+
+
+}
+
+
+#bg-4{
+    left:20%;
+    z-index: 11;
+    width: 35%;
+    top: 40%;
+
+}
+
+#bg-5{
+    width: 25%;
+    left:60%;
+    top:65%;
+}
+
+#bg-6{
+    left:62%;
+    top:90%;
+}
+
+#bg-7{
+    top:77%;
+    width: 30%;
+    left:25%;
+}
+#bg-8{
+    top:80%;
+    width: 20%;
+    left:10%;
+}
+
+
+.secound{
+    background-color: rgb(228, 209, 40);
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    margin: 0%;
+}
+.secound h1{
+    font-size: 5rem;
+
+    display: flex; 
+    justify-content: center;
+    margin-top:0%;
+}
