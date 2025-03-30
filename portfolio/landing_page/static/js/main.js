@@ -104,3 +104,29 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out"
     });
 });
+
+
+
+    // Rotate Image on Scroll
+    gsap.to(".game-ball-img", {
+        rotation: 360,  // Full rotation
+        scrollTrigger: {
+            trigger: ".game-ball-img",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,  // Smooth effect
+        }
+    });
+
+    // Scale Text from 0 to 1 Behind Image
+    gsap.fromTo(".game-ball-text", 
+        { x:"100px", y:"-50px", scale: 0, opacity: 0 },  // Start small & invisible
+        { x:"0", y:"0",scale: 1, opacity: 1,    // Fully appear
+          scrollTrigger: {
+            trigger: ".game-ball-img",
+            start: "top center", 
+            end: "bottom center",
+            scrub: 1,
+          }
+        }
+    );
