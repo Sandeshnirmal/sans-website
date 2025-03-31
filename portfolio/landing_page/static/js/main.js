@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Rotate Image on Scroll
     gsap.to(".game-ball-img", {
-        rotation: 360,  // Full rotation
+        rotation: -90,  // Full rotation
         scrollTrigger: {
             trigger: ".game-ball-img",
             start: "top bottom",

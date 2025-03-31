@@ -19,10 +19,7 @@ body{
 
 
 header{
-  /* position: relative; */
-  background-color: rgba(0,
-      0,
-      125);
+  position: fixed;
   width: 100%;
   top: 0;
   display: flex;
@@ -178,31 +175,9 @@ header h1{
 
 
 .logo{
-
-
-
-
-
-
-
-
   height: auto;
-  width: 7rem;
+  width: 5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* secound level 100vh  game ball section  */
@@ -217,8 +192,8 @@ header h1{
   width: 50rem;
   object-fit: cover;
   position: absolute;
-  left:28%
-
+  left:28%;
+  rotate: 180deg;
 }
 
 .game-ball-container{
@@ -230,26 +205,17 @@ header h1{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(180deg, #2C2929 0%, #858383 97.99%);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 97.99%);
 }
 .game-ball-text{
   font-size: x-large;
-
-
 }
 .h1{
-
-
   width: 25%;
   text-align: right;
-
-
 }
 .h2{
   width: 25%;
-
-
-
 }
 
 .about{
