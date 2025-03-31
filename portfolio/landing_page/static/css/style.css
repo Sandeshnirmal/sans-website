@@ -46,23 +46,59 @@ header h1 {
   background-position: center;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 25%;
+
+header{
+    position: fixed;
+    background-color: rgba(0,
+        0,
+        125);
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.4rem 0;
+    z-index: 5;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.867);
-  font-family: "Orbitron", sans-serif;
-  font-style: bold;
-  font-weight: 600;
-  font-size: calc(100vw / 70);
-  display: inline-block;
-  padding: 15px 20px;
-  position: relative;
+.navbar-content {
+    position: relative;
+}
+
+header h1{
+    font-family: "Tektur", sans-serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+    width: 30%;
+    /* background-image: url('{% static "images/rubiks-bg.jpg" %}'); */
+    color: transparent;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-color: black;
+    background-clip: text;
+    background-size: 200px;
+    background-position: center;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.867);
+    font-family: "Orbitron", sans-serif;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+
 }
 
 .navbar a:after {
@@ -83,6 +119,7 @@ header h1 {
   left: 0;
 }
 
+
 .hero {
   width: 100%;
   padding-top: 2rem;
@@ -93,6 +130,7 @@ header h1 {
     rgba(37, 89, 222, 1) 7.5%,
     rgb(0, 0, 125) 44.7%
   );
+
 }
 .content {
   display: flex;
@@ -122,16 +160,34 @@ header h1 {
 }
 
 .hero-img-section {
-  width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin: auto; */
+    width: 60%;
+    height: 850px;
+    /* Set container height */
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* background-color: black; */
 }
+
 .hero-img-section img {
-  width: 60%;
-  height: auto;
-  animation: float 5s ease-in-out infinite;
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    /* Stack images */
+    transition: all 1s ease-in-out;}
+
+/* Make sure the hidden image starts below the container */
+.hidden-img {
+    top: 100%;
+    /* opacity: 0; */
+    position: absolute;
+   
+
 }
 
 @keyframes float {
@@ -350,3 +406,50 @@ header h1 {
   justify-content: center;
   margin-top: 0%;
 }
+=======
+
+
+.logo{
+    height: auto;
+    width: 7rem;
+}
+
+
+
+/* secound level 100vh  game ball section  */
+
+.secoud{
+    width: 100%;
+    height: 100vh;
+}
+
+.game-ball-img{
+    height: auto;
+    width: 50rem;
+    object-fit: cover;
+    position: absolute;
+    left:28%
+}
+
+.game-ball-container{
+    position: relative;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #2C2929 0%, #858383 97.99%);
+}
+.game-ball-text{
+    font-size: x-large;
+}
+.h1{
+    width: 30%;
+    text-align: right;
+}
+.h2{
+    width: 30%;
+}
+
