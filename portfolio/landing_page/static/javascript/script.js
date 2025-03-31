@@ -1,22 +1,22 @@
-const navbar = document.getElementById("head");
+// const navbar = document.getElementById("head");
 
-let prevScrollPos = window.scrollY;
+// let prevScrollPos = window.scrollY;
 
-window.addEventListener("scroll", () => {
-  const currentScrollPos = window.scrollY;
+// window.addEventListener("scroll", () => {
+//   const currentScrollPos = window.scrollY;
 
-  if (prevScrollPos > currentScrollPos) {
-    // Scrolling up
-    navbar.style.visibility = "visible";
-  } else {
-    // Scrolling down
-    navbar.style.visibility = "hidden";
-  }
+//   if (prevScrollPos > currentScrollPos) {
+//     // Scrolling up
+//     navbar.style.visibility = "visible";
+//   } else {
+//     // Scrolling down
+//     navbar.style.visibility = "hidden";
+//   }
 
-  prevScrollPos = currentScrollPos;
+//   prevScrollPos = currentScrollPos;
 
-  console.log("works");
-});
+//   console.log("works");
+// });
 
 
 
