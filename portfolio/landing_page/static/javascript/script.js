@@ -1,3 +1,4 @@
+
 const navbar = document.getElementById("head");
 
 let prevScrollPos = window.scrollY;
