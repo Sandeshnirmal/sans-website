@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Step 1: Logo zooms in from the center-bottom and pauses
     tl.fromTo(".logo", 
-        { scale: 7, opacity: 0, x: "500%", y: "-200%", position: "absolute" },  
-        { scale: 4, opacity: 1, y: "130%", duration: 1.5, ease: "power4.out" }  
+        { scale: 11, opacity: 0, x: "500%", y: "-200%", position: "absolute" },  
+        { scale: 6, opacity: 1, y: "130%", duration: 1.7, ease: "power4.out" }  
     )
     .to(".logo", { 
         x: "+=15", y: "+=15", repeat: 5, yoyo: true, duration: 0.1  
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         x: "0%", 
         opacity: 1, 
         scale: 1, 
-        duration: 1,
+        duration: 1.5,
         ease: "power2.out" 
     }, "-=0.7");  // <-- Missing comma issue fixed
 
@@ -71,20 +71,21 @@ document.addEventListener("DOMContentLoaded", () => {
             tl2.to(".hidden-img", { 
                 y: "0%",  // Move second image back down
                 opacity: 0, 
-                duration: 1, 
+                delay: 1,
+                duration: 1,
                 ease: "power2.out" 
             })
             .to(".console", { 
                 y: "0%",  // Bring first image back
-                opacity: 1, 
+                opacity: 1,
                 duration: 1, 
                 ease: "power2.out" 
             });
-        }, 5000); // Reverse after 5 seconds
+        }, 7000); // Reverse after 5 seconds
     }
 
     // Run the switch every 9 seconds
-    setInterval(switchImages, 9000);
+    setInterval(switchImages, 10000);
 
     // HEADER & NAVBAR ANIMATIONS
     gsap.from(".header h1", {
@@ -109,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Rotate Image on Scroll
     gsap.to(".game-ball-img", {
-        rotation: -90,  // Full rotation
+        rotation: -80,  // Full rotation
         scrollTrigger: {
             trigger: ".game-ball-img",
             start: "top bottom",

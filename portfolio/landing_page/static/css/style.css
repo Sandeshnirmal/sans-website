@@ -26,8 +26,20 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 1.4rem 0;
+  padding-top: 1rem;
   visibility: visible;
+  /* background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(100px); */
+
+}
+
+.logo-container{
+  width: 20%;
+  display: flex;
+}
+
+.logo-container span{
+  height: fit-content;
 }
 
 .navbar-content {
@@ -38,6 +50,7 @@ header h1 {
   font-family: "Tektur", sans-serif;
   font-weight: 900;
   font-size: 2.8rem;
+  margin: 0.5rem;
   /* background-image: url('{% static "images/rubiks-bg.jpg" %}'); */
   color: transparent;
   background-repeat: repeat;
@@ -141,7 +154,9 @@ header h1 {
   object-fit: cover;
   position: absolute;
   /* Stack images */
-  transition: all 1s ease-in-out;}
+  transition: all 1s ease-in-out;
+  transition: float 1s;
+}
 
 /* Make sure the hidden image starts below the container */
 .hidden-img {
@@ -186,11 +201,22 @@ header h1 {
 .secoud{
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+
+.background-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 105vh;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .game-ball-img{
   height: auto;
-  width: 50rem;
+  width: 50vw;
   object-fit: cover;
   position: absolute;
   left:28%;
@@ -199,24 +225,34 @@ header h1 {
 
 .game-ball-container{
   position: relative;
+  top: 0;
   padding: 40px;
-  height: 100%;
+  height: 100vh;
   width:95.5%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 97.99%);
+  /* background: linear-gradient(180deg, #ffffff 0%, #ffffff 97.99%); */
+  z-index: 2;
 }
-.game-ball-text{
-  font-size: x-large;
+.game-text{
+  width: 30%;
+  color: white;
 }
-.h1{
-  width: 25%;
-  text-align: right;
+.game-text h1{
+  font-size: calc(100vh / 20);
+  font-family: "Audiowide", sans-serif;
+  /* color: #0000ff; */
+  text-align: center;
 }
-.h2{
-  width: 25%;
+
+.game-text p{
+  font-size: calc(100vh / 45);
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+  /* color: #0000ff; */
 }
 
 .about{
@@ -230,7 +266,7 @@ header h1 {
 .shop {
   /* padding-top: 10rem; */
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   
   background-color: #75bcff5b;
   position: relative;
@@ -318,6 +354,7 @@ header h1 {
   padding: 1.5rem;
   color: rgba(0, 0, 125, 0.873);
   width: 60%;
+  font-size: calc(100vh / 45);
 }
 
 .main-content h1 {
@@ -354,6 +391,36 @@ header h1 {
   width: 100%;
   height: 100vh;
   position: relative;
+}
+
+.contact h1 {
+  position: absolute;
+  top: 52%;
+  left: 22%;
+  font-size: calc(100vw / 34);
+  width: fit-content;
+  margin:0;
+  /* padding-left: 14%; */
+  transform: skewY(-14deg);
+    text-transform: uppercase;
+    font-family: verdana;
+    /* font-size: 4em; */
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
 }
 
 form{
@@ -430,8 +497,13 @@ button {
 }
 
 .wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
-  background-color: #989deb;
+  background-color: #a8adeb;
 }
+
+.wrapper li:nth-child(4)::after, .wrapper li:nth-child(4)::before {
+  background-color: #9198f2;
+}
+
 
 li .input {
   outline: none;
@@ -452,8 +524,14 @@ li:nth-child(2) .input {
 }
 
 li:nth-child(3) .input {
-  background: #989deb;
+  background: #a8adeb;
 }
+
+li:nth-child(4) .input {
+  background: #9198f2;
+}
+
+
 
 
 li:nth-child(1) .input:focus {
@@ -468,7 +546,11 @@ li:nth-child(2) .input:focus {
 
 li:nth-child(3) .input:focus {
   outline: none;
-  border: 3.5px solid #989deb;
+  border: 3.5px solid #a8adeb;
+}
+li:nth-child(4) .input:focus {
+  outline: none;
+  border: 3.5px solid #9198f2;
 }
 
 .wrapper li:hover, button:hover {
