@@ -98,6 +98,14 @@ header h1 {
   left: 0;
 }
 
+.parallax-section{
+ position: relative;
+    height: 100vh; /* Make each section take up the full viewport height */
+    background-size: cover;
+    background-attachment: fixed; /* This is the key for the basic parallax effect */
+    background-position: center;
+}
+
 .hero {
   width: 100%;
   padding-top: 2rem;
@@ -395,8 +403,8 @@ header h1 {
 
 .contact h1 {
   position: absolute;
-  top: 52%;
-  left: 22%;
+  top: 8%;
+  left: 18%;
   font-size: calc(100vw / 34);
   width: fit-content;
   margin:0;
